@@ -3,7 +3,7 @@ name: Meu Workflow
 on:
   workflow_dispatch:
     inputs:
-      text:
+      old_text:
         description: "Texto a ser adicionado ao README"
         required: true
       new_text:
