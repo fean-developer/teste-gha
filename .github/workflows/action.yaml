@@ -28,6 +28,7 @@ jobs:
 
   update-readme:
     runs-on: ubuntu-latest
+    depends-on: read-readme
 
     steps:
     - name: Checkout repository
