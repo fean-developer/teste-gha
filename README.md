@@ -1,3 +1,4 @@
 ### teste-gha
-- [x] Ok testado
+- [x] Ok 
 Escreva algo agora
+Não aprovado -->
