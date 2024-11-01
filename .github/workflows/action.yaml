@@ -1,6 +1,6 @@
 name: Update README
 
-on: 
+on:
   workflow_dispatch:
     inputs:
       text:
@@ -17,6 +17,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Replace text in README
+      run: |
+        sed -i 's/testado/${{ inputs.new_text }}/g' README.md
 
     - name: Add text to README
       run: echo "${{ inputs.text }}" >> README.md
