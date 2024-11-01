@@ -1,10 +1,13 @@
-name: Update README
+name: Meu Workflow
 
 on:
   workflow_dispatch:
     inputs:
       text:
         description: "Texto a ser adicionado ao README"
+        required: true
+      new_text:
+        description: "Texto a ser substituído no README"
         required: true
 
 permissions:
@@ -20,7 +23,8 @@ jobs:
 
     - name: Replace text in README
       run: |
-        sed -i 's/testado/${{ inputs.new_text }}/g' README.md
+        echo "Substituindo '${{ inputs.new_text }}' por '${{ inputs.text }}' no README"
+        sed -i 's/${{ inputs.old_text }}/${{ inputs.new_text }}/g' README.md
 
     - name: Add text to README
       run: echo "${{ inputs.text }}" >> README.md
