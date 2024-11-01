@@ -1,10 +1,6 @@
 name: Update README
 
 workflow_dispatch:
-  inputs:
-    text:
-      description: "Texto a ser adicionado ao README"
-      required: true
 
 permissions:
   contents: write
